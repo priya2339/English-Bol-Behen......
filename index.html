@@ -1,35 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>English Commitment</title>
-<link rel="stylesheet" href="style.css">
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>English Commitment</title>
+
+  <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<div class="container" id="loginPage">
+
+<!-- =====================================================
+     LOGIN PAGE
+===================================================== -->
+
+<div
+  class="container"
+  id="loginPage"
+>
+
   <h2>Search Student</h2>
 
-  <input id="searchInput" placeholder="Type student name..."/>
+
+  <input
+    id="searchInput"
+    type="text"
+    placeholder="Type student name..."
+    autocomplete="off"
+  >
+
+
   <div id="suggestions"></div>
 
-  <input id="codeInput" placeholder="Enter Code"  autocomplete="off"
-  autocorrect="off"
-  autocapitalize="off"
-  spellcheck="false"/>
-  <button onclick="login()">Login</button>
 
-  <p id="error" style="color:red;"></p>
+  <input
+    id="codeInput"
+    type="text"
+    placeholder="Enter Code"
+    autocomplete="off"
+    autocorrect="off"
+    autocapitalize="off"
+    spellcheck="false"
+  >
+
+
+  <button onclick="login()">
+    Login
+  </button>
+
+
+  <p
+    id="error"
+    class="error"
+  ></p>
+
 </div>
 
-<div id="penaltyPage">
-  <button class="red-btn" onclick="deduct()">SPOKE IN HINDI</button>
+
+
+<!-- =====================================================
+     PENALTY PAGE
+===================================================== -->
+
+<div
+  id="penaltyPage"
+>
+
+  <button
+    class="red-btn"
+    onclick="openDeductionForm()"
+  >
+    SPOKE IN HINDI
+  </button>
+
+
   <div id="info"></div>
+
+
+  <button
+    class="logout-btn"
+    onclick="logout()"
+  >
+    Logout
+  </button>
+
 </div>
+
+
+
+<!-- =====================================================
+     DEDUCTION MODAL
+===================================================== -->
+
+<div
+  id="deductionModal"
+  class="modal"
+>
+
+  <div class="modal-content">
+
+
+    <h2>
+      Deduct Points
+    </h2>
+
+
+    <!-- NAME -->
+
+    <label for="deductionName">
+      Name
+    </label>
+
+    <input
+      id="deductionName"
+      type="text"
+      readonly
+    >
+
+
+
+    <!-- DEDUCTED BY -->
+
+    <label for="deductedBy">
+      Deducted By
+    </label>
+
+    <input
+      id="deductedBy"
+      type="text"
+      placeholder="Enter your name"
+      autocomplete="off"
+    >
+
+
+
+    <!-- POINTS -->
+
+    <label for="pointsToDeduct">
+      Points
+    </label>
+
+    <input
+      id="pointsToDeduct"
+      type="number"
+      value="2"
+      readonly
+    >
+
+
+
+    <!-- REASON -->
+
+    <label for="reason">
+      Why cut points?
+    </label>
+
+    <textarea
+      id="reason"
+      rows="3"
+      placeholder="Why are the points being deducted?"
+    ></textarea>
+
+
+
+    <!-- CONSEQUENCE -->
+
+    <label for="consequence">
+      What consequence?
+    </label>
+
+    <textarea
+      id="consequence"
+      rows="3"
+      placeholder="What consequence will the student face?"
+    ></textarea>
+
+
+
+    <!-- BUTTONS -->
+
+    <div class="form-buttons">
+
+
+      <button
+        class="cancel-btn"
+        onclick="closeDeductionForm()"
+      >
+        Cancel
+      </button>
+
+
+      <button
+        class="deduct-btn"
+        onclick="confirmDeduction()"
+      >
+        Deduct 2 Points
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
