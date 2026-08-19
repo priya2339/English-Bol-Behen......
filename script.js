@@ -464,6 +464,7 @@ const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyXz9X5SPsLfI9wbbFQ
 // Har student ka apna login code (Name -> Code)
 const STUDENTS = {
   "Fanija": "F00",
+  "Samiksha": "PS",
   "Pooja": "P0",
   "Anchal Gupta": "P01",
   "Renu Patel": "P02",
