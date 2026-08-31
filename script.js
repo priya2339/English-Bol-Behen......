@@ -604,7 +604,15 @@ const STUDENTS = {
   "Archana Gupta": "P136",
   "Tisha Gupta": "P137",
   "Alisha Pradhan": "P138",
-  "Nikeeta Mahant": "P139"
+  "Nikeeta Mahant": "P139",
+  "Priya Chouhan":   "P140",
+"Raman":           "P141",
+"Tanzil":          "P142",
+"Pooja Palkanwar": "P143",
+"Samiksha":        "P144",
+"Bhavna":          "P145",
+"Nidhi":           "P146",
+"Prerna":          "P147"
 };
 
 
